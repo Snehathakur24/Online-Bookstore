@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="header"><!--class is an attribute-->
+        <h1> 
+          WELCOME TO  ONLINE BOOKSTORE
+        </h1>
+        <nav>
+           <ul>
+            <li><a href="homepage.html">
+                Home Page
+            </a>
+            </li>
+            <li><a href="loginpage.html">
+                Login Page
+            </a>
+            </li>
+            <li><a href="cataloguepage.html">
+                Catalogue Page
+            </a>
+            </li>
+            <li><a href="registrationpage.html">
+                Registration Page
+            </a>
+            </li>
+             </ul>
+        </nav> 
+    </div>
+    <div class="form-container">
+        <h2>Loginpage</h2>
+        <form action="#" method="POST"><!--action if for link (for keeping the page static or empty)--><!--GET POST PUT DELETE these are actions-->
+            <!--PUT-it is used for modify-->
+            <!--GET-backened se data -->
+            <!--POST-jo dsta eneter kr rhe ho use validate krega-->
+            <!--DELETE-database se dlt ni hota ye cache ko clear krta hai-->
+            <label for="Username">Username</label>      <!--label is a tag that indicate ki kha apna content rkhna hai/ specific location pr jata hai-->
+            <input type="text" id="Username" name="Username" required><br>
+            <label for="password">Password</label>
+            <input type="password" id="Password" name="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <footer><!--for copyright and developed by-->
+        <p> &copy;2025 Online Bookstore
+           <br><!--break or 1 line space-->
+            All Copyrights Are Reserved
+        </p>
+       </footer>
+</body>
+</html>
