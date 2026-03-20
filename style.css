@@ -1,135 +1,189 @@
-*{
-    margin:4;
-    padding:5;
-    box-sizing:border-box;
+/* Reset */
+* {
+    margin: 0;   /* fixed */
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    line-height:1.6;
-    background-color:  #98d8ff; ;
-    color:#333;
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #dbeafe, #eff6ff); /* soft gradient */
+    color: #1e293b;
+    text-align: center;
 }
-.header{   /*here we have used . for class to run */
- background-color: #172fcb;
- color: #fff;
- padding:10px0;/*10 for top left and o for bottom right */
- text-align:center;
+
+/* Header */
+.header {
+    background: #1e3a8a;
+    color: #fff;
+    padding: 12px 0; /* fixed */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-.header h1{
+
+.header h1 {
     margin: 10px;
-    color: rgb(199, 244, 230);
+    color: #e0f2fe;
 }
-nav ul{
-    list-style:none ;
+
+/* Navbar */
+nav ul {
+    list-style: none;
     display: flex;
-    justify-content:center;
-    padding: 10px0;
+    justify-content: center;
+    padding: 10px 0;
 }
-nav ul li{
+
+nav ul li {
     margin: 0 15px;
 }
-nav ul li a{
-    color: beige;
+
+nav ul li a {
+    color: #e0f2fe;
     text-decoration: none;
+    font-weight: bold;
 }
-nav ul li a:hover{/*hover will generate special effect on the element where we will take our cursor*/ 
-text-decoration:underline ;
+
+nav ul li a:hover {
+    color: #38bdf8;
 }
-.main-container{
-    display :flex;
-    justify-content:space-between ;
+
+/* Layout */
+.main-container {
+    display: flex;
+    justify-content: space-between;
     margin: 20px;
+    gap: 20px;
 }
-.left-frame,.right-frame,.center-frame{
+
+/* Frames */
+.left-frame,
+.right-frame,
+.center-frame {
     width: 30%;
     padding: 15px;
-    background: #fff;
-    border-radius:5px;
-    box-shadow:0 0 10px rgba (0,0,0,0.1);
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* fixed rgba */
+    transition: 0.3s;
 }
-.left-frame ul{
-    list-style:none;
+
+.left-frame:hover,
+.center-frame:hover,
+.right-frame:hover {
+    transform: translateY(-5px);
 }
-.left-frame li{
-    margin:10px ;
+
+/* Sidebar */
+.left-frame ul {
+    list-style: none;
 }
+
+.left-frame li {
+    margin: 10px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.left-frame li:hover {
+    background: #dbeafe;
+    cursor: pointer;
+}
+
+/* Right */
 .right-frame {
-    background:#f9f9f9;
+    background: #f8fafc;
 }
-footer{
+
+/* Footer (fixed at bottom properly) */
+footer {
     text-align: center;
-    padding: 10px;
-    background: #80a3c6;
-    color:fff;
-    position: absolute;/*we use absolute when we have to divide screen acc to content in multiple parts   */
-    width:100%;
-    bottom:0;
+    padding: 12px;
+    background: #1e3a8a;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
 }
-/*style for catalogue table */
+
+/* Catalogue Table */
 .catalogue-table table {
-    width:100% ;
-    border-collapse:collapse ;
+    width: 100%;
+    border-collapse: collapse;
 }
-.catalogue-table th,.catalogue-table td{
-padding: 10px;
-border: 1px solid #4d0202d1;
-text-align:center;
+
+.catalogue-table th,
+.catalogue-table td {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
 }
-.catalogue-table th{
-    background:#f9f9f9;
+
+.catalogue-table th {
+    background: #3b82f6;
+    color: #fff;
 }
-.catalogue-table tr:nth-child(even){
-    background:#f9f9f9;
+
+.catalogue-table tr:nth-child(even) {
+    background: #f1f5f9;
 }
-.catalogue-table tr:nth-child(odd){
-    background:rgba(103, 234, 249, 0.6);
+
+.catalogue-table tr:nth-child(odd) {
+    background: #e0f2fe;
 }
-.Book-image{
-    width:150px ;
-    height: 150px;
+
+/* Image */
+.Book-image {
+    width: 130px;
+    height: 140px;
+    border-radius: 8px;
 }
-.ctg{
+
+/* Category */
+.ctg {
     text-align: center;
     padding: 10px;
-    background: #80a3c6;
-    color:fff;
-    position: relative;/*we use absolute when we have to divide screen acc to content in multiple parts   */
-    width:100%;
-    bottom:0;
+    background: #3b82f6;
+    color: #fff;
 }
 
-
-body{
-    text-align:center;
-    background: #80a3c6;
-    align-items:center;
-    justify-content: center;
+/* ===== LOGIN / SIGNUP BOX ===== */
+.form-container,
+.sign-container {
+    width: 320px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.form-container{
-
-    border-radius: 50px;
-    text-align:center;
-}
-button{
-    background-color: #1c4670;
-    color:floralwhite;
-}
-
-button{
-    color: #80a3c6;
-    background-color: #0c3258;
+/* Input fields (ADD THIS for better UI) */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
 }
 
-.sign-container{
-    border-radius: 50px;
-    text-align:center;
-    padding: 50px;
-
+input:focus {
+    border-color: #3b82f6;
 }
-body{
-    text-align:center;
-    background: #80a3c6;
-    align-items:center;
-    justify-content: center;
+
+/* Buttons */
+button {
+    background-color: #3b82f6;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2563eb;
 }
